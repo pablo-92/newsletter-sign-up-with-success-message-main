@@ -2,14 +2,15 @@ const subscribe = document.querySelector('.subscribe-btn');
 subscribe.addEventListener('click', function() {
     const inputMail = document.querySelector('.email');
     const failValidation = document.querySelector ('.fail-validation');
-    const format = /([a-z0-9._+-]+@[a-z0-9-]+\.[a-z]{2,3})/gmi;
+    const format = /([a-z0-9._+-]+@[a-z0-9-]+\.[a-z]{2,3})/gmi; //mail format validator variable
 
     if (inputMail.value.match(format) ) {
         const tarjeta = document.querySelector('.tarjeta');
         tarjeta.style.display = 'none';
+        const mailRegistered = document.querySelector('.mail-registered');
+        mailRegistered.innerHTML = inputMail.value;
         const overlay = document.querySelector('.overlay');
         overlay.style.display = 'block';
-
         
     } else {
         inputMail.style.color = 'var(--Tomato)';
@@ -23,3 +24,4 @@ const dismiss = document.querySelector('.dismiss');
 dismiss.addEventListener('click', function() {
     location.reload();
 });
+

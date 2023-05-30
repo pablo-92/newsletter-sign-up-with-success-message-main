@@ -119,6 +119,10 @@ span {
     margin-top: 200px;
 }
 
+.overlay {
+    display: none;
+}
+
 @media (min-width: 1024px) {
     .container {
         background: var(--Charcoal-Grey);
@@ -192,9 +196,5 @@ span {
 
     .dismiss {
         margin-top: 0px;
-    }
-
-    .overlay {
-        display: none;
     }
 }
